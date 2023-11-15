@@ -1,0 +1,80 @@
+@charset "UTF-8";
+ /* HEADER 부분 CSS */
+.headerWrap{
+    background:white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.header {
+    margin: 0 auto;
+    width: 80%;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.header .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .logo img{
+    display: block;
+    object-fit: contain;
+    height: 25px;
+}
+
+.header .menuWrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 350px;
+}
+
+.header .menuWrap div h3 {
+    cursor : pointer;
+}
+
+.header .menuWrap div {
+    cursor : pointer;
+}
+
+.header .loginWrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 150px;
+}
+
+/* 로그인 성공 시  */
+.header .loginSuccessWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+    flex-direction: 1;
+}
+
+.header .loginSuccessWrap .loginMyPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E76161;
+    width: 70px;
+    height: 25px;
+    border-radius: 20px;
+}
+
+.header .loginSuccessWrap .loginMyPage a {
+    color: white;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+/* HEADER END */
+

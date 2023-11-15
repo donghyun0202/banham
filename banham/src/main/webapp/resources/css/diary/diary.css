@@ -1,0 +1,290 @@
+@charset "UTF-8";
+
+
+.bannerWrap {
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    background-color: #4C4C4C;
+}
+
+.bannerWrap::after {
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-image: url("/resources/images/dog/dog5.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.bannerWrap h1{
+    margin-top: 30px;
+    font-size: 40px;
+    letter-spacing: 4px;
+}
+
+.bannerWrap p{
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+/* 여기 아래는 diary.css 니까 분리해야됨 */
+
+#diary_option h2, #diary_option form {        /*나만의 다이어리 제목이랑 작성하기 버튼 한줄로 */
+    display: inline; /* 요소를 인라인 요소로 설정 */
+}
+
+#diary_option {
+    display: flex; /* 부모 요소를 Flex 컨테이너로 설정 */
+    justify-content: space-between; /* 요소들 사이의 여백을 최대화하여 좌우 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+}
+
+#book {
+    margin: 1% auto;
+    width: 900px;
+    height: 600px;
+}
+
+#book .turn-page {
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+#book div {
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+}
+
+#diary_title {
+   display: flex; /* 부모 요소를 Flex 컨테이너로 설정 */
+    justify-content: space-between; /* 요소들 사이의 여백을 최대화하여 좌우 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+}
+
+#diary_title h2, #diary_title imag {
+    display: inline; /* 요소를 인라인 요소로 설정 */
+}
+
+#diary_title img {
+    width: 40px;
+    height: 40px;
+}
+
+
+.section{
+     width: 1000px;
+     margin: 0 auto;
+     margin-top: 40px;
+ }
+
+ .section .overviewWrap{
+    border-bottom: 3px solid black;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+ }
+
+ .section .overviewWrap h2{
+     margin-bottom: 10px;
+ }
+
+ .section .overview{
+     padding: 30px;
+ }
+ 
+ .section .overviewtextwrap{
+ 	height: 500px;
+ 	overflow: auto;
+ }
+
+/*  .section .mapWrap{
+     width: 100%;
+     height: 250px;
+     background-color: bisque;
+     margin-bottom: 30px;
+ } */
+
+
+
+/*  .section{
+     width: 1000px;
+     margin: 20px, auto;
+ }
+  */
+/*   .section .overviewWrap{
+     border-bottom: 3px solid black;
+     display: flex; Flexbox 사용
+    justify-content: space-between; 요소 사이의 공간을 최대로 설정하여 버튼을 오른쪽으로 밀어줌
+    align-items: center; 요소를 세로 중앙 정렬
+ }
+
+ .section .overviewWrap h2 {
+     display: inline; 요소를 인라인 요소로 설정
+      margin-bottom: 10px;
+ }*/
+ 
+ #return_mydiary {
+    display: inline; /* 요소를 인라인 요소로 설정 */
+ }
+ 
+/* 
+ .section .overview{
+     padding: 30px;
+ }
+  */
+ 
+ 
+ /* 등록 페이지 */
+.diary-title{
+margin: 50px;
+text-align: center;
+}
+
+.diary-title img {
+display: block;
+object-fit: contain;
+height: 50px;
+margin: 0 auto;
+margin-bottom: 10px;
+}
+
+
+.container {
+width: 1100px;
+margin: 0 auto;
+}
+
+
+.diary-board-table {
+font-size: 14px;
+width: 100%;
+border:1px solid #ccc;
+}
+
+.diary-board-table tr, td, th {
+border:1px solid #ccc;
+}
+
+.diary-board-table input {
+border: none;
+width: 100%;
+}
+
+.diary-board-table input:focus {
+outline: none;
+}
+
+.diary-board-table .input-date {
+    width: 100px
+    }
+
+.diary-board-table .th-title, .th-user {
+height: 30px;
+}
+
+.diary-board-table .th-location {
+height: 40px;
+}
+
+.diary-board-table .th-overview {
+height: 500px;
+}
+.diary-board-table td{
+padding: 10px;
+}
+.diary-board-table .th-overview textarea{
+width: 100%;
+height: 500px;
+resize: none;
+padding: 20px;
+border: 1px solid #ccc;
+}
+.diary-board-table .th-overview textarea:focus{
+outline: none;
+}
+
+.diary-board-table .add-location-button{
+cursor: pointer;
+margin-left: 10px;
+}
+
+.diary-board-table .th-location td {
+display: flex;
+justify-content: flex-start;
+align-items: center;
+text-align: center;
+}
+
+.diary-board-table .th-location .td-location-add-wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    }
+
+.diary-board-table .th-location .locationaddwrap {
+display: flex;
+justify-content: flex-start;
+align-items: center;
+text-align: center;
+}
+
+.diary-board-table .add-location-wrap {
+display: flex;
+justify-content: center;
+align-items: centers;
+margin: 5px;
+}
+.diary-board-table .add-location-wrap .add-location {
+cursor: pointer;
+border: 1px  solid #E76161;
+color: #E76161;
+margin: 5px;
+padding: 5px 10px;
+border-radius: 5px;
+}
+
+.diary-board-table .add-pet-button, .add-location-button{
+cursor: pointer;
+margin-left: 10px;
+}
+
+/* 버튼 - 글등록 버튼*/
+.diary-button-wrap {
+width: 100%;
+height: 80px;
+padding: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+.diary-button-wrap input {
+width: 150px;
+height: 30px;
+cursor: pointer;
+}
+
+.diary-button-wrap input.register-click {
+background-color: #E76161;
+color: white;
+border: none;
+border-radius: 3px;
+}
+ 

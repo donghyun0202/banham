@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+   <mapper namespace="com.project.banham.diary.DiaryDaoInterface">
+   
+   		<insert id="DiaryRegService" parameterType="mydiaryVO">
+		insert into banham_diary (diary_title, diary_writer, diary_overview, diary_date_create, diary_location)
+		values (#{diary_title}, #{diary_writer}, #{diary_overview}, #{diary_date_create}, #{diary_location})
+		</insert>
+		
+		<select id="myDiaryList" resultType="mydiaryVO">
+			select * from banham_diary
+		  	where diary_writer = #{diary_writer}
+		</select>
+		
+		<select id="detailDiary" resultType="mydiaryVO">
+			select * from banham_diary
+		  	where diary_id = #{diary_id}
+		</select>
+		
+		<select id="diarylist" resultType="mydiaryVO">
+			select * from banham_diary
+		</select>
+		
+		<select id="SearchKeywrod" resultType="mydiaryVO">
+	 	select * from banham_diary 
+	 	where diary_title Like CONCAT('%',#{keyword},'%') 
+	 	OR diary_location Like CONCAT('%',#{keyword},'%')
+	 	ORDER BY diary_id DESC
+	</select>
+   </mapper>

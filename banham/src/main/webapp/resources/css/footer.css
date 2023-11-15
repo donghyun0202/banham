@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* MAIN PAGE FOOTER 형식 */
+
+.footer{
+  /*   position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0; */
+    /* margin-top: 80px; */
+    background-color: #212121;
+    height: 200px;
+    width: 100%;
+    /* text-align: center; */
+    color: #BDBDBD;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 100px;
+}
+
+.footerLogo{
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.footerLogo img{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.footer .footer-text-wrap{
+    margin-top: 70px;
+    font-size: 14px;
+    margin-left: 20px;
+    color: white;
+}
+
+
+

@@ -1,0 +1,306 @@
+@charset "UTF-8";
+
+/* 동물추가 PAGE 동물 추가 안된경우 START */
+.addMyPetWrap .nonePetWrap{
+    width:100%;
+    height: 100px;
+    background-color: #EAEAEA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+.addMyPetWrap .addPetButtonWrap{
+    text-align: center;
+    margin-top: 20px;
+}
+/* 동물추가 PAGE 동물 추가 안된경우 END*/
+
+/* 동물추가 PAGE 동물 추가 된경우 START */
+/* .addMyPetWrap .addPetWrap{
+
+} */
+
+.addMyPetWrap .addPetWrap .swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.addMyPetWrap .addPetWrap .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 400px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 10px 0px;
+}
+.addMyPetWrap .addPetWrap .swiper-slide img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    height: 70%;
+}
+
+.addMyPetWrap .addPetWrap .swiper-slide .petTitleWrap {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.addMyPetWrap .addPetButtonWrap input {
+    width: 100px;
+    margin-left: 10px;
+    height: 40px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.addMyPetWrap .addPetButtonWrap input.addButton {
+    border: none;
+    background-color: #E76161;
+    color: white;
+    border-radius: 5px;
+}
+
+/* 동물추가 PAGE 동물 추가 된경우 END */
+
+.petexplainWrap{
+    display: none;
+    width: 100%;
+    height: 100%;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position:fixed;
+    top:50%; 
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index: 9999;
+
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+}
+
+.petexplainWrap .petexplainBox {
+    width:500px;
+    height: 850px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 30px;
+    position: relative;
+}
+
+.petexplainBox .petTextWrap img {
+    object-fit: contain;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+}
+
+.petexplainBox .petTextWrap h2 {
+    margin: 20px;
+    text-align: center;
+}
+
+.petexplainBox .petInfoWrap p {
+    margin: 5px 0;
+}
+
+.petexplainBox .petInfoWrap input {
+    width: 100%;
+    margin: 5px 0;
+    height: 40px;
+    padding: 0px 10px;
+    border-radius: 5px;
+    border: 1px solid #d2d2d2;
+    cursor: pointer;
+}
+
+.petexplainBox .petInfoWrap textarea {
+    height: 120px;
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: 1px solid #d2d2d2;
+    resize: none;
+    font-size: 16px;
+}
+
+/* 임의의 영역 생성 */
+textarea { 
+    width: 200px;
+    height: 200px;
+    overflow-y: scroll;
+    }
+
+/* 아래의 모든 코드는 영역::코드로 사용 */
+textarea::-webkit-scrollbar {
+    width: 8px;  /* 스크롤바의 너비 */
+}
+
+textarea::-webkit-scrollbar-thumb {
+    height: 30%; /* 스크롤바의 길이 */
+    background: #ED8787; /* 스크롤바의 색상 */
+    
+    border-radius: 8px;
+}
+
+.petexplainBox .petInfoWrap .petButtonWrap {
+   	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.petexplainBox .petInfoWrap .petButtonWrap input {
+   	margin: 5px;
+}
+
+.petexplainBox .petInfoWrap .petButtonWrap .addPet {
+    color: white;
+    background-color: #E76161;
+    border: none;
+    margin: 10px 0;
+}
+
+.petexplainBox .petInfoWrap select {
+    width: 100%;
+    margin: 5px 0;
+    height: 40px;
+    padding: 0px 10px;
+    border-radius: 5px;
+    border: 1px solid #d2d2d2;
+}
+
+.petexplainBox .petInfoWrap .petBreedBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input[type=file]::file-selector-button {
+    width: 150px;
+    height: 30px;
+    background: #fff;
+    border: 1px solid #d2d2d2;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+input#file {
+    border: none;
+}
+
+/* MYPAGE PET 확인 MODAL */
+.showPetexplainWrap{
+    display: none;
+    width: 100%;
+    height: 100%;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position:fixed;
+    top:50%; 
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index: 9999;
+
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+}
+
+.showPetexplainWrap .showPetexplainBox {
+    width: 400px;
+    height: 600px;
+    background-color: white;
+    border-radius: 5px;
+    /* padding: 30px; */
+    position: relative;
+    overflow: hidden;
+}
+
+.showPetImgWrap {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.showPetImgWrap img {
+    width:  100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.showPetTextWrap{
+    width: 100%;
+    height: 50%;
+    padding: 20px;
+}
+
+.showPetTextWrap .showPetTitleWrap{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.showPetTextWrap .showPetTitleWrap #showPetbAw{
+    color: #E76161;
+}
+
+.showPetTextWrap .showPetTextareaWrap{
+    width: 100%;
+    height: 70%;
+}
+
+.showPetTextWrap .showPetTextareaWrap textarea {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    margin-top: 20px;
+    padding: 10px;
+    resize: none;
+    border: none;
+}
+
+.showPetButtonWrap{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.showPetButtonWrap input {
+    width: 100px;
+    height: 30px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.showPetButtonWrap .showPetButtonchange {
+    background-color: #E76161;
+    border: none;
+    color: white;
+    border-radius: 3px;
+}
+

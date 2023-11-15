@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.project.banham.club.ClubDaoInterface">
+  	<!-- 모임추가 -->
+	<insert id="clubReg" parameterType="clubVO">
+		insert into banham_club (club_title, club_date, club_person, club_deadline, club_pet, club_location, club_overview, club_status, club_writer, club_date_create)
+		values (#{club_title}, #{club_date}, #{club_person}, #{club_deadline}, #{club_pet}, #{club_location}, #{club_overview}, #{club_status},#{club_writer},#{club_date_create})
+	</insert>
+	
+	<update id="updatedeadline">
+		<![CDATA[
+		update banham_club
+		set club_status = "end"
+		where  CLUB_DEADLINE < CURDATE() and club_status ="progress";
+		]]>
+	</update>
+	
+	<update id="updateApplyDeadline">
+		Update banham_apply, banham_club
+		set banham_apply.apply_status = "refuse"
+		where banham_apply.club_id = banham_club.club_id and banham_apply.apply_status = "waiting" and banham_club.club_status = "end"
+	</update>
+	
+	<select id="clubboardList" resultType="clubVO">
+		select club_id, club_title, club_writer, club_date_create, club_person, club_status
+		from banham_club ORDER BY club_id DESC
+	</select>
+	
+	<select id="searchBoardId" resultType="clubVO">
+		 select * from banham_club
+		  where club_id = #{club_id}
+	</select>
+	
+	<select id="applyResult" resultType="applyVO">
+		select * from banham_apply
+		where club_id = #{club_id}
+	</select>
+	
+	<insert id="clubApply" parameterType="applyVO">
+		insert into banham_apply (club_id, user_id, apply_status, pet_id)
+		values (#{club_id}, #{user_id}, #{apply_status}, #{pet_id})
+	</insert>
+	
+	<select id="searchApplyId" resultType="int">
+	 	select count(*) from banham_apply 
+	 	where club_id = #{club_id} and user_id = #{user_id}
+	</select>
+	
+	<update id="deleteClub">
+		update banham_club
+		set club_title = #{club_title}, club_overview = #{club_overview}, club_status = 'delete'
+		where club_writer = #{club_writer} and club_id = #{club_id}
+	</update>
+	
+	<select id="selectPetIDandOwnerId" resultType="petVO">
+	 	select * from banham_pet 
+	 	where owner_id = #{owner_id} and pet_id = #{pet_id}
+	</select>
+	
+	<select id="myclubList" resultType="clubVO">
+	 	select * from banham_club 
+	 	where club_writer = #{club_writer}
+	</select>
+	
+	<select id="applyclubList" resultType="clubresultVO">
+	 	select banham_club.*, banham_apply.*
+		from banham_club INNER JOIN banham_apply
+		ON banham_club.club_id = banham_apply.club_id
+		where user_id = #{user_id}
+	</select>
+	
+	 <update id="updateClubStatus">
+		update banham_apply
+		set apply_status = #{apply_status}
+		where club_id = #{club_id} and user_id = #{user_id}
+	</update>
+	
+	<select id="SearchResult" resultType="clubVO">
+	 	select * from banham_club 
+	 	where club_title Like CONCAT('%',#{keyword},'%') 
+	 	OR club_location Like CONCAT('%',#{keyword},'%')
+	 	ORDER BY club_id DESC
+	</select>
+	
+	
+	<select id="myclubSearchList" resultType="clubVO">
+	 	select * from banham_club 
+	 	where 
+	 	(club_title Like CONCAT('%',#{keyword},'%') 
+	 	OR club_location Like CONCAT('%',#{keyword},'%'))
+	 	AND club_writer = #{club_writer}
+	</select>
+	
+	<select id="applyclubSearchList" resultType="clubresultVO">
+	 	select banham_club.*, banham_apply.*
+		from banham_club INNER JOIN banham_apply
+		ON banham_club.club_id = banham_apply.club_id
+		where
+		(club_title Like CONCAT('%',#{keyword},'%') 
+	 	OR club_location Like CONCAT('%',#{keyword},'%'))
+	 	AND user_id = #{user_id}
+	</select>
+	
+  </mapper>

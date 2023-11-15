@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+/* MAIN CSS */
+ #section .imgWrap{
+     position: relative;
+     width: 100%;
+     height: 500px;
+ }
+
+ #section .imgWrap img{
+     display: block;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+
+ #text{
+     margin-top: 80px;
+     margin-bottom: 50px;
+ }
+
+ #text .textWrap{
+     text-align: center;
+     letter-spacing: 1.5px;
+     padding: 10px;
+ }
+
+ #text .textWrap p{
+     margin-top: 10px;
+ }

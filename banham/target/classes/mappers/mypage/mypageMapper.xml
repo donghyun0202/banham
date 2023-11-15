@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.project.banham.pet.PetDaoInterface">
+  
+	<!-- 동물추가 -->
+	<insert id="addPet" parameterType="petVO">
+		insert into banham_pet (pet_name, pet_birthyear, pet_weight, pet_breed, pet_personality, pet_imgfile, owner_id)
+		values (#{pet_name}, #{pet_birthyear}, #{pet_weight}, #{pet_breed}, #{pet_personality}, #{pet_imgfile}, #{owner_id})
+	</insert>
+	
+	<select id="petList" resultType="petVO">
+		select * from banham_pet
+		where owner_id = #{owner_id}
+	</select>
+	
+	<select id="searchPetId" resultType="petVO">
+		select * from banham_pet where pet_id = #{pet_id}
+	</select>
+	
+	<update id="changePetInfoNofile" parameterType="Map">
+		UPDATE banham_pet
+	    SET pet_name = #{param1}, pet_birthyear = #{param3}, pet_weight = #{param2}, pet_breed = #{param4}, pet_personality = #{param5}
+	    WHERE pet_id = #{param6};
+	</update>
+	
+	<update id="changePetInfo" parameterType="Map">
+		UPDATE banham_pet
+     	SET pet_name = #{param1}, pet_birthyear = #{param3}, pet_weight = #{param2}, pet_breed = #{param4},pet_personality = #{param6} , pet_imgfile = #{param5}
+    	WHERE pet_id = #{param7};
+	</update>
+	
+	<delete id="deletePetInfo" parameterType="String">
+		DELETE FROM banham_pet
+		WHERE pet_id = #{pet_id};
+	</delete>
+  </mapper>

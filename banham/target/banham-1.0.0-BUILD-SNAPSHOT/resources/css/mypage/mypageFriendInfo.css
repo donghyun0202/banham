@@ -1,0 +1,205 @@
+@charset "UTF-8";
+
+.friendMenuWrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.friendMenuWrap div {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* border: 1px solid #E76161;
+    border-top: none;
+    border-right: none; */
+    border-bottom: 1.5px solid #E76161;
+    cursor: pointer;
+}
+
+.friendMenuWrap div:last-child {
+    border-right: 1.5px solid #E76161;
+}
+
+.friendMenuWrap div:first-child {
+    border-left: 1.5px solid #E76161;
+}
+
+.friendMenuWrap div.friendCheck {
+    border: 1.5px solid #E76161;
+    border-bottom: none;
+    color: #E76161;
+}
+
+
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+section.notice {
+padding: 80px 0;
+}
+
+.page-title {
+margin-bottom: 60px;
+}
+.page-title h3 {
+font-size: 28px;
+color: #333333;
+font-weight: 400;
+text-align: center;
+}
+
+
+.board-table {
+font-size: 13px;
+width: 100%;
+border-top: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+}
+
+.board-table a {
+color: #333;
+display: inline-block;
+line-height: 1.4;
+word-break: break-all;
+vertical-align: middle;
+}
+.board-table a:hover {
+text-decoration: underline;
+}
+.board-table th {
+text-align: center;
+}
+
+.board-table .th-checkbox {
+    width: 10%;
+    text-align: center;
+    }
+    
+
+.board-table .th-num {
+    width: 10%;
+    text-align: center;
+}
+
+.board-table .th-friendId {
+    width: 65%;
+    text-align: center;
+}
+
+
+.board-table .th-date {
+    width: 15%;
+}
+
+.board-table .th-applyId {
+    width: 50%;
+    text-align: center;
+}
+
+.board-table .th-state {
+    width: 15%;
+    text-align: center;
+}
+
+
+
+.board-table th, .board-table td {
+padding: 14px 0;
+}
+
+.board-table tbody td {
+border-top: 1px solid #e7e7e7;
+text-align: center;
+}
+
+.board-table tbody th {
+padding-left: 28px;
+padding-right: 14px;
+border-top: 1px solid #e7e7e7;
+text-align: left;
+}
+
+.board-table tbody th p{
+display: none;
+}
+
+
+/* reset */
+
+* {
+list-style: none;
+text-decoration: none;
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+.clearfix:after {
+content: '';
+display: block;
+clear: both;
+}
+.container {
+width: 800px;
+margin: 0 auto;
+}
+.blind {
+position: absolute;
+overflow: hidden;
+clip: rect(0 0 0 0);
+margin: -1px;
+width: 1px;
+height: 1px;
+}
+
+.buttonWrap .input-checkbox {
+    margin: 10px;
+    cursor: pointer;
+}
+
+.buttonWrap label {
+    font-size: 14px;
+}
+
+.buttonWrap .input-button {
+    background-color: #EAEAEA;
+    border: 1px solid #D5D5D5;
+    height: 20px;
+    width: 60px;
+    margin-left: 5px;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #333;
+}
+
+.requestMenuWrap {
+    display: flex;
+    justify-content: flex-start;
+    width: 180px;
+    height: 30px;
+}
+
+.requestMenuWrap div {
+    flex-grow: 1;
+    height: 30px;
+    border: 1px solid #D5D5D5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: none;
+    background-color: #F6F6F6;
+    color: #BDBDBD;
+    cursor: pointer;
+}
+
+.requestMenuWrap div.requestClick {
+    background-color: white;
+    color: #E76161;
+    font-weight: 500;
+}

@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/* reset css 화면 초기 설정 */
+
+html,body{
+	height: 100%;
+	font-family: 'Noto Sans KR', sans-serif;
+	}
+	
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: #333;
+}
+
+.clearfix:after{
+    content:"";display: block;clear: both;
+}
+
+.container{
+    margin: 0 auto;
+    width: 80%;
+}
+
+input{
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+textarea{
+	font-family: 'Noto Sans KR', sans-serif;
+}

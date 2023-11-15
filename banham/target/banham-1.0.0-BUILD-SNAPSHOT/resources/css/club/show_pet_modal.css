@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+.showPetexplainWrap{
+    display: none;
+    width: 100%;
+    height: 100%;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position:fixed;
+    top:50%; 
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index: 9999;
+
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+}
+
+.showPetexplainWrap .showPetexplainBox {
+    width: 400px;
+    height: 600px;
+    background-color: white;
+    border-radius: 5px;
+    /* padding: 30px; */
+    position: relative;
+    overflow: hidden;
+}
+
+.showPetImgWrap {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.showPetImgWrap img {
+    width:  100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.showPetTextWrap{
+    width: 100%;
+    height: 50%;
+    padding: 20px;
+}
+
+.showPetTextWrap .showPetTitleWrap{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.showPetTextWrap .showPetTextareaWrap{
+    width: 100%;
+    height: 70%;
+}
+
+.showPetTextWrap .showPetTextareaWrap textarea {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    margin-top: 20px;
+    padding: 10px;
+    resize: none;
+    border: none;
+}
+
+.showPetButtonWrap{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.showPetButtonWrap input {
+    width: 100px;
+    height: 30px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.showPetButtonWrap .showPetButtonchange {
+    background-color: #E76161;
+    border: none;
+    color: white;
+    border-radius: 3px;
+}
+
+#showPetbAw {
+	color: #E76161;
+}

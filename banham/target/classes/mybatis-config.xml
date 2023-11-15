@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration 
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+    <configuration>
+        
+         <!-- <settings>
+	        <setting name="mapUnderscoreToCamelCase" value="true" />
+	        <setting name="defaultCharset" value="UTF-8" />
+    	</settings>
+         -->
+        <typeAliases>
+    		<typeAlias alias="userVO" type="com.project.banham.user.UserVO"/>
+    		<typeAlias alias="petVO" type="com.project.banham.pet.PetVO"/>
+    		<typeAlias alias="clubVO" type="com.project.banham.club.ClubVO"/>
+    		<typeAlias alias="applyVO" type="com.project.banham.club.ApplyVO"/>
+    		<typeAlias alias="clubresultVO" type="com.project.banham.club.ClubResultVO"/>
+    		<typeAlias alias="mydiaryVO" type="com.project.banham.diary.MyDiaryVO"/>
+		</typeAliases>
+    </configuration>

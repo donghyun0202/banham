@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+/* club-pet MODAL */
+.club-pet-modal-Wrap {
+    display: none;
+    width: 100%;
+    height: 100%;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position:fixed;
+    top:50%; 
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index: 9999;
+
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+}
+
+.club-pet-modal-Wrap .club-pet-modal-Box {
+    width:500px;
+    height: 700px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 30px;
+    position: relative;
+}
+
+.club-pet-text-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin: 10px;
+    height: 20%;
+}
+
+.club-pet-text-wrap img {
+    display: block;
+    object-fit: contain;
+    width: 50px;
+}
+
+.club-pet-item-wrap {
+    height: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    overflow: auto;
+}
+
+.club-pet-item-wrap::-webkit-scrollbar {
+    width: 10px;
+}
+.club-pet-item-wrap::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+}
+.club-pet-item-wrap::-webkit-scrollbar-track {
+    background-color: #e2e2e2;
+}
+
+.club-pet-item-wrap .pet-item-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 40px;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 3px 5px 3px; */
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.club-pet-item-wrap .pet-item-wrap h3 {
+    margin-right: 5px;
+} 
+
+.club-pet-item-wrap .pet-item-wrap p {
+    margin-right: 5px;
+} 
+
+.club-pet-item-wrap .pet-item-check {
+    border: 2px solid #E76161;
+}
+
+.club-pet-button-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 10%;
+}
+
+.club-pet-button-wrap input {
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+    background-color: white;
+    cursor:pointer;
+}
+
+.club-pet-button-wrap input#club-input-ok {
+    color: #E76161;
+    border: 1px solid #E76161;
+    border-radius: 3px;
+}
+
+.club-pet-button-wrap input#club-input-cancle {
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+
+.club-pet-button-wrap input#club-input-apply {
+    color: #E76161;
+    border: 1px solid #E76161;
+    border-radius: 3px;
+}
